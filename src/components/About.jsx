@@ -9,7 +9,7 @@ import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="sm:w-[250px] w-full">
+    <Tilt className="sm:w-[250px] w-[94%]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-px rounded-[20px] shadow-card"
@@ -34,12 +34,12 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Interdoction</p>
+        <p className={`${styles.sectionSubText} text-left`}>Interdoction</p>
         <h2 className={`${styles.sectionHeadText}`}>Overview</h2>
       </motion.div>
 
       <motion.p
-        className="mt-4 text-secondary text-[17px] leading-[30px] max-w-3xl"
+        className="mt-4 text-secondary text-justify text-[17px] leading-[30px] max-w-3xl"
         variants={fadeIn("", "", 0.1, 1)}
       >
         i'm skilled softwer developer with experience in TypeScript and

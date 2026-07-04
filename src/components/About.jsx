@@ -32,7 +32,7 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <section className={`${styles.paddingX}`}>
+    <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>Interdoction</p>
         <h2 className={`${styles.sectionHeadText}`}>Overview</h2>
@@ -53,7 +53,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </section>
+    </>
   );
 };
 

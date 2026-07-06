@@ -8,8 +8,10 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
+import { StarsCanvas } from "./components/canvas";
+import { ToastContainer } from "react-toastify";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -28,6 +30,7 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </BrowserRouter>
   );
 };

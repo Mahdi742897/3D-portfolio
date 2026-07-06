@@ -26,7 +26,7 @@ const Computers = ({ isMobile }) => {
         penumbra={1}
         intensity={3}
         decay={0}
-        castShadow
+        castShadow={false}
         shadow-mapSize={1024}
       >
         <object3D position={[0, -3.25, -1.5]} />
@@ -35,7 +35,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.75}
-        position={isMobile ? [0, -1.3, -1.2] :[0, -4, -1.5]}
+        position={isMobile ? [0, -1.3, -1.2] : [0, -4, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </group>
@@ -62,8 +62,9 @@ const ComputersCanvas = () => {
   }, []);
   return (
     <Canvas
+      dpr={[1, 1.5]}
       frameloop="demand"
-      shadows
+      shadows={false}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
       className="w-full h-full absolute inset-0"

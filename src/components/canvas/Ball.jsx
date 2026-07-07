@@ -36,7 +36,21 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas
+    <>
+      <Canvas
+        frameloop="demand"
+        // Force 1x pixel ratio and turn off preserveDrawingBuffer
+        dpr={[1, 1]}
+        gl={{ antialias: false, preserveDrawingBuffer: false }}
+        className="w-full h-full absolute inset-0"
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imageUrl={icon} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+      {/* <Canvas
       frameloop="demand"
       gl={{ preserveDrawingBuffer: true }}
       className="w-full h-full absolute inset-0"
@@ -50,7 +64,8 @@ const BallCanvas = ({ icon }) => {
         <Ball imageUrl={icon} />
       </Suspense>
       <Preload all />
-    </Canvas>
+    </Canvas> */}
+    </>
   );
 };
 

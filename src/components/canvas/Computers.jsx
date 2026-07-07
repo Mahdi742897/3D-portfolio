@@ -5,16 +5,27 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene-mobile.glb");
+  // const computer = useGLTF("/desktop_pc/scene-transformed.glb");
+  // const computer = useGLTF("/desktop_pc/scene.gltf");
 
+  // useEffect(() => {
+  //   computer.scene.traverse((child) => {
+  //     if (child.isMesh) {
+  //       child.castShadow = true;
+  //       child.receiveShadow = true;
+  //     }
+  //   });
+  // }, [computer.scene]);
   useEffect(() => {
     computer.scene.traverse((child) => {
       if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
+        // Only cast/receive shadows if we are NOT on mobile
+        child.castShadow = !isMobile;
+        child.receiveShadow = !isMobile;
       }
     });
-  }, [computer.scene]);
+  }, [computer.scene, isMobile]); // add isMobile to the dependency array
 
   return (
     <group>
@@ -32,6 +43,12 @@ const Computers = ({ isMobile }) => {
         <object3D position={[0, -3.25, -1.5]} />
       </spotLight>
       <pointLight intensity={1.4} />
+      {/* <primitive
+        object={computer.scene}
+        scale={isMobile ? 0.4 : 0.75}
+        position={isMobile ? [0, -1.3, -1.2] : [0, -4, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
+      /> */}
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.75}
@@ -62,11 +79,13 @@ const ComputersCanvas = () => {
   }, []);
   return (
     <Canvas
-      dpr={[1, 1.5]}
-      frameloop="demand"
+      // Force a strict 1x resolution on mobile to save GPU power
+      dpr={isMobile ? [1, 1] : [1, 1.5]}
+      frameloop="always"
       shadows={false}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      // Turn OFF preserveDrawingBuffer to free up system RAM
+      gl={{ preserveDrawingBuffer: false, antialias: !isMobile }}
       className="w-full h-full absolute inset-0"
       onCreated={({ gl }) => {
         gl.toneMappingExposure = 1.25;
@@ -82,6 +101,27 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all />
     </Canvas>
+    // <Canvas
+    //   dpr={[1, 1.5]}
+    //   frameloop="demand"
+    //   shadows={false}
+    //   camera={{ position: [20, 3, 5], fov: 25 }}
+    //   gl={{ preserveDrawingBuffer: true }}
+    //   className="w-full h-full absolute inset-0"
+    //   onCreated={({ gl }) => {
+    //     gl.toneMappingExposure = 1.25;
+    //   }}
+    // >
+    //   <Suspense fallback={<CanvasLoader />}>
+    //     <OrbitControls
+    //       enableZoom={false}
+    //       maxPolarAngle={Math.PI / 2}
+    //       minPolarAngle={Math.PI / 2}
+    //     />
+    //     <Computers isMobile={isMobile} />
+    //   </Suspense>
+    //   <Preload all />
+    // </Canvas>
   );
 };
 

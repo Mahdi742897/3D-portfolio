@@ -11,255 +11,252 @@ import {
     redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
-    figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
-  } from "../assets";
-  
-  export const navLinks = [
+} from "../assets";
+
+export const navLinks = [
     {
-      id: "about",
-      title: "About",
+        id: "about",
+        title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+        id: "skills",
+        title: "Skills",
     },
     {
-      id: "contact",
-      title: "Contact",
-    },
-  ];
-  
-  const services = [
-    {
-      title: "Web Developer",
-      icon: web,
+        id: "work",
+        title: "Work",
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
+        id: "projects",
+        title: "Projects",
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+        id: "contact",
+        title: "Contact",
+    },
+];
+
+export const contact = {
+    name: "Mahdi Feyzi",
+    title: "Front-End Developer",
+    location: "Arak, Iran",
+    email: "mahdifeyzi84@gmail.com",
+    phone: "09390380956",
+    phoneHref: "tel:+989390380956",
+    github: "https://github.com/Mahdi742897",
+};
+
+const services = [
+    {
+        title: "Front-End Developer",
+        icon: web,
     },
     {
-      title: "Content Creator",
-      icon: creator,
-    },
-  ];
-  
-  const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
+        title: "React & Next.js",
+        icon: mobile,
     },
     {
-      name: "CSS 3",
-      icon: css,
+        title: "REST API Integration",
+        icon: backend,
     },
     {
-      name: "JavaScript",
-      icon: javascript,
+        title: "Node.js & PostgreSQL",
+        icon: creator,
+    },
+];
+
+const skillCategories = [
+    {
+        title: "Frontend",
+        skills: [
+            "JavaScript",
+            "TypeScript",
+            "HTML5",
+            "CSS3",
+            "React.js",
+            "Next.js",
+            "Redux Toolkit",
+            "React Router",
+            "Tailwind CSS",
+            "Formik",
+            "Yup",
+            "Axios",
+            "REST APIs",
+        ],
     },
     {
-      name: "TypeScript",
-      icon: typescript,
+        title: "Backend",
+        skills: ["Node.js", "Express.js"],
     },
     {
-      name: "React JS",
-      icon: reactjs,
+        title: "Database",
+        skills: ["PostgreSQL", "SQL", "Database Design"],
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+        title: "Mobile",
+        skills: ["React Native", "Expo"],
     },
     {
-      name: "Tailwind CSS",
-      icon: tailwind,
+        title: "Tools",
+        skills: ["Git", "GitHub", "Appwrite"],
+    },
+];
+
+const technologies = [
+    {
+        name: "HTML 5",
+        icon: html,
     },
     {
-      name: "Node JS",
-      icon: nodejs,
+        name: "CSS 3",
+        icon: css,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+        name: "JavaScript",
+        icon: javascript,
     },
     {
-      name: "Three JS",
-      icon: threejs,
+        name: "TypeScript",
+        icon: typescript,
     },
     {
-      name: "git",
-      icon: git,
+        name: "React JS",
+        icon: reactjs,
     },
     {
-      name: "figma",
-      icon: figma,
+        name: "Redux Toolkit",
+        icon: redux,
     },
     {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-  
-  const experiences = [
-    {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        name: "Tailwind CSS",
+        icon: tailwind,
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        name: "Node JS",
+        icon: nodejs,
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        name: "git",
+        icon: git,
+    },
+];
+
+const experiences = [
+    {
+        title: "Front-End Developer — Contract",
+        company_name: "Telecommunication Company of Central Province, Iran",
+        icon: web,
+        iconBg: "#383E56",
+        date: "2023–2026 · On-site",
+        points: [
+            "Developed and maintained most major front-end modules of NIMA, an enterprise telecommunications platform used across three provinces, excluding the traffic-management module.",
+            "Built interfaces, forms, tables, workflows, and data-driven features, and integrated them with backend REST APIs.",
+            "Developed an internal organizational messaging system with file-sharing capability.",
+            "Debugged production issues, maintained existing features, and implemented changes based on operational requirements using Git.",
+            "Worked initially with another front-end developer and a back-end developer, then became the primary front-end developer alongside a back-end developer.",
+            "Stack: React.js, Redux Toolkit, React Router, Tailwind CSS, Formik, Yup, Axios, REST APIs, Git.",
+        ],
+    },
+];
+
+const education = {
+    degree: "B.Sc. in Computer Engineering",
+    school: "Amirkabir University of Technology, Arak",
+    date: "2023–2027",
+    status: "Expected graduation — degree in progress",
+};
+
+const languages = [
+    {
+        name: "Persian",
+        level: "Native",
     },
     {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-  ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+        name: "English",
+        level: "Intermediate (B1/B2)",
     },
     {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+        name: "French",
+        level: "Beginner",
+    },
+];
+
+const projects = [
+    {
+        name: "FTTH Contractor Platform",
+        role: "Front-End Developer",
+        description:
+            "Web platform used by fiber-optic contractors to register and manage subscriber information. I built the Next.js front-end, implemented contractor and subscriber workflows, integrated backend APIs, and maintained features based on operational needs.",
+        tags: [
+            {
+                name: "nextjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "frontend",
+                color: "green-text-gradient",
+            },
+            {
+                name: "restapi",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: web,
+        imageFit: "contain",
     },
     {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
-  const projects = [
-    {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+        name: "Takaffol-e Aytam",
+        role: "Full-Stack Developer",
+        description:
+            "Charity management app with a public landing page and admin dashboard. I built the frontend and backend, designed the PostgreSQL schema, and implemented donor, family, account, and inventory management, authentication with basic role-based permissions, APIs, and Excel export.",
+        tags: [
+            {
+                name: "nextjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "express",
+                color: "green-text-gradient",
+            },
+            {
+                name: "postgresql",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: backend,
+        imageFit: "contain",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+        name: "Movie Mobile App",
+        role: "Mobile Developer · In development",
+        description:
+            "React Native (Expo) movie-discovery app in development. It retrieves and lists movies from TMDB, with filtering still in progress, and uses Appwrite for search-related data and trending-movie features.",
+        tags: [
+            {
+                name: "react-native",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "expo",
+                color: "green-text-gradient",
+            },
+            {
+                name: "appwrite",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: mobile,
+        imageFit: "contain",
     },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
-    },
-  ];
-  
-  export { services, technologies, experiences, testimonials, projects };
+];
+
+export {
+    services,
+    technologies,
+    skillCategories,
+    experiences,
+    education,
+    languages,
+    projects,
+};

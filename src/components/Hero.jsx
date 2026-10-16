@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
+import { contact } from "../constants";
 
 const Hero = () => {
   return (
@@ -14,17 +15,34 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi I'm <span className="text-[#915eff]">Mahdi</span>
+            Hi, I&apos;m <span className="text-[#915eff]">{contact.name.split(" ")[0]}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develope 3D visuals user <br className="sm:block hidden" />{" "}
-            interfaces and web applications
+            {contact.title} based in {contact.location}.
+            <br className="sm:block hidden" /> I build production web apps with
+            React and Next.js.
           </p>
+          <div className="mt-6 flex flex-wrap gap-4 pointer-events-auto">
+            <a
+              href="#contact"
+              className="bg-tertiary py-3 px-6 rounded-xl text-white font-medium text-[16px] hover:text-white"
+            >
+              Get in touch
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-secondary py-3 px-6 rounded-xl text-white font-medium text-[16px]"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
       <ComputersCanvas />
       <div className="absolute sm:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to About">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{

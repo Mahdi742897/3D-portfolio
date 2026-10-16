@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../style";
@@ -17,7 +16,7 @@ const Navbar = () => {
         <Link
           onClick={() => {
             setActive("");
-            window.scrollbars(0, 0);
+            window.scrollTo(0, 0);
           }}
           to="/"
           className="flex items-center gap-2"

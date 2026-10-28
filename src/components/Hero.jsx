@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="mt-6 flex flex-wrap gap-4 pointer-events-auto">
             <a
               href="#contact"
-              className="bg-tertiary py-3 px-6 rounded-xl text-white font-medium text-[16px] hover:text-white"
+              className="command-btn py-3 px-6 text-[16px]"
             >
               Get in touch
             </a>
@@ -33,7 +33,7 @@ const Hero = () => {
               href={contact.github}
               target="_blank"
               rel="noreferrer"
-              className="border border-secondary py-3 px-6 rounded-xl text-white font-medium text-[16px]"
+              className="command-btn py-3 px-6 text-[16px] !bg-transparent hover:!bg-[#101326]"
             >
               GitHub
             </a>

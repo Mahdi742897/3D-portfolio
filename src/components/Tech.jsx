@@ -25,7 +25,7 @@ const Tech = () => {
               {category.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="bg-tertiary text-white-100 text-[14px] px-4 py-2 rounded-lg border border-[#915eff]/30"
+                  className="command-tag px-4 py-2 text-[14px]"
                 >
                   {skill}
                 </span>

@@ -11,11 +11,13 @@ const ServiceCard = ({ index, title, icon }) => {
     <Tilt className="sm:w-[250px] w-[94%]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-px rounded-[20px] shadow-card"
+        className="w-full h-full"
       >
-        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt="" className="size-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
+        <div className="command-card min-h-[280px] flex justify-evenly items-center flex-col p-8">
+          <div className="size-20 rounded-full bg-black-200/50 flex items-center justify-center border border-secondary/10 mb-4">
+            <img src={icon} alt="" className="size-10 object-contain" />
+          </div>
+          <h3 className="text-white text-[18px] font-bold text-center tracking-wide">
             {title}
           </h3>
         </div>

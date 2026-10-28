@@ -53,9 +53,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl w-full"
+        className="command-card p-5 w-full"
       >
-        <div className="relative w-full h-[230px] bg-black-200 rounded-2xl flex items-center justify-center">
+        <div className="relative w-full h-[230px] bg-black-200/50 rounded-2xl flex items-center justify-center border border-secondary/10">
           <img
             src={image}
             alt=""
@@ -87,7 +87,7 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <p key={tag.name} className={`text-[14px] ${tag?.color}`}>
+              <p key={tag.name} className={`command-tag ${tag?.color}`}>
                 #{tag?.name}
               </p>
             ))}

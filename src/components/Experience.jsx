@@ -14,10 +14,16 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#1d1836", color: "#fff" }}
-      contentArrowStyle={{ borderRight: "7px solid #232631" }}
+      contentStyle={{
+        background: "rgba(10, 13, 28, 0.8)", // tailwind tertiary
+        color: "#fff",
+        border: "1px solid #2a2e4a",
+        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+        borderRadius: "1rem"
+      }}
+      contentArrowStyle={{ borderRight: "7px solid #2a2e4a" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #02040a" }}
       icon={
         <div className="flex justify-center items-center size-full">
           <img
